@@ -11,11 +11,11 @@ import portfolio_mealPlanner from './assets/portfolio_mealPlanner.webp';
 function App() {
   return (
     <div className='bg-bg h-full'>
-      <div className='flex flex-col bg-transparent w-fit mb-8 lg:mb-16 m-auto'>
+      <div className='flex flex-col m-auto bg-transparent w-fit pt-4 pb-4 lg:pb-16'>
         <h1 className='text-center text-light font-medium text-base'>My Recent Work</h1>
         <h2 className='text-center text-primaryAlt font-medium text-3xl'>Projects</h2>
       </div>
-      <div className='w-11/12 md:w-3/4 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 print:grid-cols-3'>
+      <div className='w-11/12 md:w-3/4 p-4 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 print:grid-cols-3'>
         <PortfolioCard
           header='The Periodic System in a interactive system'
           link='https://github.com/luigi989/periodic'
