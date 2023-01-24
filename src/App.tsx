@@ -7,6 +7,7 @@ import portfolio_smallApps from './assets/portfolio_smallApps.webp';
 import portfolio_ragnarok from './assets/portfolio_ragnarok.webp';
 import portfolio_spaceApp from './assets/portfolio_spaceApp.webp';
 import portfolio_mealPlanner from './assets/portfolio_mealPlanner.webp';
+import portfolio_kurskatalog from './assets/builder.webp';
 
 function App() {
   return (
@@ -33,6 +34,12 @@ function App() {
           link='https://github.com/luigi989/Ragnarok'
           demoLink='https://ragnarok.luigiworks.tech'
           path={portfolio_ragnarok}
+        />
+        <PortfolioCard
+          header='Kurskatalog'
+          link='https://github.com/HawkieOne/kurskatalog-id'
+          demoLink='https://kurskatalog.hawkie.me/'
+          path={portfolio_kurskatalog}
         />
         <PortfolioCard
           header='Examples in HTML/CSS'
