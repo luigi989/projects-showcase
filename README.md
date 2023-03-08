@@ -1,6 +1,6 @@
 ## :microscope: Portfolio
 
-![Header Image](src/assets/image_hd.webp)
+![Header Image](image_hd.webp)
 
 This is a website with I show my projects, complete and incomplete.
 

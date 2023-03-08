@@ -1,12 +1,5 @@
 import './App.css';
 import PortfolioCard from './PortfolioCard';
-import portfolio_periodic from './assets/portfolio_periodic.webp';
-import portfolio_exaples from './assets/portfolio_examples.webp';
-import portfolio_smallApps from './assets/portfolio_smallApps.webp';
-import portfolio_ragnarok from './assets/portfolio_ragnarok.webp';
-import portfolio_spaceApp from './assets/portfolio_spaceApp.webp';
-import portfolio_mealPlanner from './assets/portfolio_mealPlanner.webp';
-import portfolio_kurskatalog from './assets/builder.webp';
 
 function App() {
   return (
@@ -20,41 +13,41 @@ function App() {
           header='The Periodic System in a interactive system'
           link='https://github.com/luigi989/periodic'
           demoLink='https://periodic.luigiworks.tech'
-          path={portfolio_periodic}
+          path={'/portfolio_periodic.webp'}
         />
         <PortfolioCard
           header='Kurskatalog'
           link='https://github.com/HawkieOne/kurskatalog-id'
           demoLink='https://kurskatalog.hawkie.me/'
-          path={portfolio_kurskatalog}
+          path={'/builder.webp'}
         />
         <PortfolioCard
           header='Space-app'
           link='https://github.com/HawkieOne/space-app'
           demoLink='https://spaceapp.hawkie.me'
-          path={portfolio_spaceApp}
+          path={'/portfolio_spaceApp.webp'}
         />
         <PortfolioCard
           header='SmallApps'
           link='https://github.com/luigi989/smallApps'
           demoLink='https://apps.luigiworks.tech'
-          path={portfolio_smallApps}
+          path={'/portfolio_smallApps.webp'}
         />
         <PortfolioCard
           header='Ragnarok'
           link='https://github.com/luigi989/Ragnarok'
           demoLink='https://ragnarok.luigiworks.tech'
-          path={portfolio_ragnarok}
+          path={'/portfolio_ragnarok.webp'}
         />
         <PortfolioCard
           header='Examples in HTML/CSS'
           link='https://github.com/luigi989/examples'
-          path={portfolio_exaples}
+          path={'/portfolio_examples.webp'}
         />
         <PortfolioCard
           header='Meal-Planner'
           link='https://github.com/HawkieOne/Meal-Planner'
-          path={portfolio_mealPlanner}
+          path={'/portfolio_mealPlanner.webp'}
         />
       </div>
     </div>
