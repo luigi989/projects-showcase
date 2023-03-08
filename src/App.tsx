@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import PortfolioCard from './PortfolioCard';
 import portfolio_periodic from './assets/portfolio_periodic.webp';
