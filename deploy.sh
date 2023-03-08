@@ -1,1 +1,1 @@
-npm run build && scp -O -r build/* cpanel:public_html
+npm run build && scp -O -r build/* cpanel:luigiworks.tech
