@@ -1,34 +1,32 @@
+import DemoButton from "./DemoButton"
+
 interface PortfolioCardProps {
     header: string
-    link: string
     demoLink?: string
     path: string
+    onClick: () => void;
 }
 
-const PortfolioCard = ({header, link, demoLink, path} : PortfolioCardProps)  => {
+const PortfolioCard = ({header, demoLink, path, onClick} : PortfolioCardProps)  => {
     return (
-        <article className='p-5 bg-bgAlt rounded-2xl flex flex-col'>
+        <article className='p-5 bg-liSec dark:bg-bgAlt rounded-2xl flex flex-col transition ease-linear duration-300'>
             <div className='rounded-2xl'>
-                <img src={path} alt='portfolio 1' className='rounded-2xl' />
+                <img className='rounded-2xl' alt='portfolio 1' src={path} />
             </div>
 
-            <h1 className='grow my-5 text-liBg dark:text-white'>{header}</h1>
-            <div className='flex gap-3 '>
-                <a target='_blank' rel='noreferrer'
-                    href={link ? link : 'https://github.com/luigi989'}>
-                    <button className='hover:bg-primary hover:text-bgAlt 
-                        transition ease-linear duration-300
-                        w-max inline-block py-1 px-3 rounded-lg cursor-pointer border-solid border-[1px]
-                    border-primaryAlt text-primaryAlt'>Github</button>
-                </a>
-                {demoLink &&
-                    <a target='_blank' rel='noreferrer'
-                        href={demoLink}>
-                        <button className='hover:text-light hover:bg-bgAlt 
+            <h1 className='grow my-5 text-xl text-liBg dark:text-white'>{header}</h1>
+            <div className='flex gap-2'>
+                <button onClick={onClick}
+                    aria-label="Read more about project"
+                    title="Read more about project"
+                    className='hover:bg-liPrimary hover:text-liSec
+                    dark:hover:bg-primary dark:hover:text-bgAlt 
                     transition ease-linear duration-300
-                    w-max inline-block py-1 px-3 rounded-lg cursor-pointer border-solid border-[1px] 
-                    border-primary bg-primaryAlt text-bg'>Live Demo</button>
-                    </a>}
+                    w-max inline-block py-1 px-3 rounded-lg cursor-pointer border-solid border-[1px]
+                    border-liPrimary dark:border-primaryAlt text-liPrimary dark:text-primaryAlt print:text-xs'>
+                    Read More
+                </button>
+                {demoLink && <DemoButton link={demoLink} />}
             </div>
         </article>
     )

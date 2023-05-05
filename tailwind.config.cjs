@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
   ],
@@ -25,7 +26,7 @@ module.exports = {
         primary: '#98971a',
       },
       backgroundImage: {
-        'bgTexture': "url('/public/bg-texture.webp')",
+        'bgTexture': "url('/bg-texture.webp')",
       },
     },
   },
