@@ -58,7 +58,7 @@ function App() {
   return (
     <div className={'bg-bg h-full w-full m-0 transition ease-linear duration-300 ' + (isDark ? 'bg-bgTexture' : 'lightPattern')}>
       <DarkModeButton />
-      <div className='flex flex-col m-auto bg-liBg dark:bg-transparent w-fit pt-4 pb-4 lg:mb-16'>
+      <div className='flex flex-col m-auto bg-liBg dark:bg-transparent w-fit pt-6 pb-4 lg:mb-16'>
         <h1 className='text-center text-liLight dark:text-light font-medium text-base'>My Recent Work</h1>
         <h2 className='text-center text-liSec dark:text-primaryAlt font-medium text-3xl'>Projects</h2>
       </div>
@@ -78,6 +78,7 @@ function App() {
           <ProjectContainer onClick={() => closeProject()} />
         </div>}
 
+      {projects.length > 0 ?
       <div className={'w-11/12 md:w-3/4 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 print:grid-cols-3 '
         + (projectChosen.title == '' ? "block" : "hidden")}>
         {projects.map((project) =>
@@ -89,7 +90,11 @@ function App() {
             path={project.link + '.webp'}
           />
         )}
-      </div>
+      </div> : 
+      <div className='m-auto flex space-x-4 items-center justify-center bg-liBg dark:bg-transparent w-fit'>
+        <p className='text-liSec dark:text-primaryAlt text-xl'>Loading data</p>
+        <div className='w-5 h-5 rounded-full border-l-2 border-solid border-liSec dark:border-primaryAlt animate-spin'/>
+      </div>}
     </div>
   );
 }
